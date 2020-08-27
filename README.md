@@ -1,2 +1,1 @@
-# maksimuser-goit-markup-hw-04
-Декоративные эффекты и векторная графика
+# goit-markup-hw-01
