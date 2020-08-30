@@ -126,6 +126,11 @@ img {
 	margin-left: auto;
 }
 
+.site-contacts .link {
+	display: flex;
+	align-items: center;
+}
+
 .site-contacts .item:not(:last-child) {
 	margin-right: 50px;
 }
@@ -137,6 +142,12 @@ img {
 	line-height: 1.4;
 	letter-spacing: 0.02em;
 }
+.site-contacts .icon {
+	margin-right: 10px;
+}
+.site-contacts .icon:hover {
+	color: var(--accent-color);
+}
 
 .site-contacts .link:hover,
 .site-contacts .link:focus {
@@ -145,13 +156,22 @@ img {
 
 /* Hero */
 .section.hero {
+	max-width: 1600px;
+	height: 600px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+		url("../images/background-hero.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
 	padding-top: 200px;
 	padding-bottom: 200px;
 
 	text-align: center;
-	background-color: var(--secondary-bg-color);
+	background-color: #963232;
 	color: var(--primary-white-color);
-
 	letter-spacing: 0.06em;
 }
 
@@ -203,6 +223,8 @@ img {
 	font-size: 36px;
 	line-height: 1.17;
 	text-align: center;
+	margin-top: 0;
+	margin-bottom: 50px;
 }
 
 /* features */
@@ -212,6 +234,37 @@ img {
 
 .features-list {
 	display: flex;
+}
+
+.features-list .item::before {
+	display: block;
+	height: 120px;
+	content: "";
+	background-size: 70px 70px;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-bottom: 30px;
+	background-color: var(--grey-bg-color);
+}
+
+/* можно через классы: задаем li класс icon-"*****" и 
+прописываем bg-i: url ("") */
+/* .icon-antenna::before {
+	background-image: url("../images/icon/antenna.svg");
+} */
+
+.features-list .item:nth-child(1)::before {
+	background-image: url("../images/icon/antenna.svg");
+}
+
+.features-list .item:nth-child(2)::before {
+	background-image: url("../images/icon/clock.svg");
+}
+.features-list .item:nth-child(3)::before {
+	background-image: url("../images/icon/diagram.svg");
+}
+.features-list .item:nth-child(4)::before {
+	background-image: url("../images/icon/astronaut.svg");
 }
 
 .features-list .item {
@@ -245,11 +298,6 @@ img {
 	padding-bottom: 94px;
 }
 
-.work .title {
-	margin-top: 0;
-	margin-bottom: 50px;
-}
-
 .list-work {
 	display: flex;
 }
@@ -275,7 +323,7 @@ img {
 	width: calc((100% - 30px * 3) / 4);
 	margin-right: 30px;
 
-	background-color: #ffffff;
+	background-color: var(--primary-white-color);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
 	text-align: center;
@@ -283,11 +331,6 @@ img {
 
 .list-team .item:nth-last-child(-n + 1) {
 	margin-right: 0;
-}
-
-.team .caption {
-	margin-top: 0;
-	margin-bottom: 50px;
 }
 
 .team .section-subtitle {
@@ -312,14 +355,48 @@ img {
 	line-height: 1.19;
 }
 
+.item-social::before {
+	display: block;
+	display: flex;
+	flex-direction: row;
+	content: "";
+	height: 44px;
+	border: 2px solid red;
+	background-size: 44px 44px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.item-social:nth-child(1)::before {
+	background-image: url("../images/icon/icon_socialnetworks/Instagram.svg");
+}
+.item-social:nth-child(2)::before {
+	background-image: url("../images/icon/icon_socialnetworks/Twitter.svg");
+}
+.item-social:nth-child(3)::before {
+	background-image: url("../images/icon/icon_socialnetworks/Facebook.svg");
+}
+.item-social:nth-child(4)::before {
+	background-image: url("../images/icon/icon_socialnetworks/LinkedIn.svg");
+}
+
 /* FOOTER */
 .footer {
 	background-color: var(--secondary-bg-color);
 }
 
+.footer .container {
+	display: flex;
+	align-items: baseline;
+}
+
 .section.footer {
 	padding-top: 60px;
 	padding-bottom: 60px;
+}
+
+.footer-address {
+	margin-right: 70px;
 }
 
 /* logo */
@@ -360,6 +437,19 @@ img {
 
 .address-list .item:nth-child(2n) {
 	margin-bottom: 0;
+}
+
+.section.footer .text {
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 1.14;
+	text-transform: uppercase;
+	color: var(--primary-white-color);
+}
+
+.socials {
+	display: flex;
+	flex-direction: row;
 }
 
 /* PORTFOLIO.html */
@@ -426,6 +516,10 @@ img {
 	margin-bottom: 0;
 }
 
+.list-porfolio .item:hover {
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .card-content {
 	padding: 20px 24px;
 	border-right: 1px solid #eeeeee;
@@ -446,7 +540,7 @@ img {
 .card-content .text {
 	margin-top: 0;
 	margin-bottom: 0;
-
+	font-weight: bold;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.87;
